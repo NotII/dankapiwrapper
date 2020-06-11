@@ -1,10 +1,4 @@
-    const DankJS = require('./lib/DankJSClient');
+const DankAPI = require("./lib/client");
+const client = new DankAPI("token");
 
-    function Dank(token) {
-        return new dank(token);
-    }
-
-    Dank.Memer = DankJSClient;
-    Dank.version = require('./package.json').version;
-
-    module.exports = DankJSClient;
+console.log(client.abandon("hello"))
