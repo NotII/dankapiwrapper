@@ -1,4 +1,7 @@
 const DankAPI = require("./lib/client");
 const client = new DankAPI("token");
+const fs = require("fs");
 
-console.log(client.abandon("hello"));
+client.abandon("fuck you dad").then(img => {
+    img.pipe(fs.createWriteStream("./img.jpg"))
+})
